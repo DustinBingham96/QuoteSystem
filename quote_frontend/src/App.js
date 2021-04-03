@@ -1,6 +1,11 @@
 import React from "react";
 import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import HomePage from "./pages/HomePage";
+import SalesAEditPage from "./pages/SalesAEditPage";
+import QuoteEditPage from "./pages/QuoteEditPage";
+
 
 function App() {
 
@@ -30,6 +35,11 @@ function App() {
           Learn React
         </a>
       </header>
+      <BrowserRouter>
+      <Route exact path="/" render={(props) => <HomePage {...props} component={HomePage}/>} />
+      <Route path="/sales" render={(props) => <SalesAEditPage {...props} component={SalesAEditPage}/>}  />
+      <Route path="/quotes" render={(props) => <QuoteEditPage {...props} component={QuoteEditPage}/> } />
+      </BrowserRouter>
     </div>
   );
 }

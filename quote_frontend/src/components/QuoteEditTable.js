@@ -1,11 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import MaterialTable from 'material-table';
 
-const [data, setData] = useState([
-    {id: 4535435, custid: 4352345, notes: '12345', finalized: false, total: 3457823}
-]);
+
 
 export default function QuoteEditTable() {
+
+    const [data, setData] = useState([
+        {id: 4535435, custid: 4352345, notes: '12345', finalized: false, total: 3457823}
+    ]);
+
     return (
         <div>
             <MaterialTable

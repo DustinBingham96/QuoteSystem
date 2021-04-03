@@ -1,17 +1,25 @@
 import React from 'react';
-import Header from '../components';
-import Footer from '../components';
-import QuoteTable from '../components';
-import SalesAssocTable from '../components';
-
-export default function HomePage() {
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import QuoteTable from '../components/QuoteTable';
+import SalesAssocTable from '../components/SalesAssocTable';
+import Grid from '@material-ui/core/Grid'
+ 
+function HomePage() {
     return (
         <div>
             <Header />
-            <SalesAssocTable />
-            <QuoteTable />
+                <Grid container row>
+                    <Grid item>
+                        <SalesAssocTable />
+                    </Grid>
+                    <Grid item>
+                        <QuoteTable />
+                    </Grid>
+                </Grid>
             <Footer />
         </div>
     )
 }
 
+export default HomePage;
