@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
 import QuoteTable from '../components/QuoteTable';
 import SalesAssocTable from '../components/SalesAssocTable';
 import Grid from '@material-ui/core/Grid'
@@ -17,9 +16,8 @@ function HomePage() {
                         <QuoteTable />
                     </Grid>
                 </Grid>
-            <Footer />
         </div>
-    )
+    );
 }
 
 export default HomePage;

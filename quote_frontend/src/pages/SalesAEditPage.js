@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
+
 import SalesAssocEditTable from '../components/SalesAssocEditTable';
 import {Grid} from '@material-ui/core';
 
@@ -13,7 +13,7 @@ export default function SalesAEditPage() {
                     <SalesAssocEditTable />
                 </Grid>
             </Grid>
-            <Footer />
+
         </div>
     )
 }

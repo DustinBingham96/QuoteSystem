@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
+
 import QuoteEditTable from '../components/QuoteEditTable';
 import { Grid } from '@material-ui/core';
 
@@ -13,7 +13,6 @@ export default function QuoteEditPage() {
                     <QuoteEditTable />
                 </Grid>
             </Grid>
-            <Footer />
         </div>
     )
 }

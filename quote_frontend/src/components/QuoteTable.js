@@ -20,8 +20,8 @@ export default function QuoteTable() {
                     {title: 'Total', field: 'total', type: 'numeric'}
                 ]}
                 data = {data}
-                title="Sales Associate Database"
+                title="Quote Database"
             />
         </div>
-    )
+    );
             }

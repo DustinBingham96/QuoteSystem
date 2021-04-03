@@ -3,10 +3,11 @@ import MaterialTable from 'material-table';
 
 
 
-export default function SalesAssocEditTable() {
+function SalesAssocEditTable() {
 
-    const [data, setData] = useState([]);
-
+  const [data, setData] = useState([
+    {id: 4535435, userid: 'googly', password: '12345', commission: 1234.32, address: '343 Monel lane'}
+]);
     return (
         <div>
             <MaterialTable
@@ -53,5 +54,7 @@ export default function SalesAssocEditTable() {
                 title="Sales Associate Database"
             />
         </div>
-    )
+    );
 }
+
+export default SalesAssocEditTable;
