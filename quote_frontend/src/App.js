@@ -23,7 +23,7 @@ function App() {
   return (
 
       <div>
-        <div><NewCustForm></NewCustForm></div>
+        
         
       <BrowserRouter>
         <Route exact path="/" render={(props) => <HomePage {...props} component={HomePage}/>} />

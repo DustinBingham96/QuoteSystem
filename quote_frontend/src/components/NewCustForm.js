@@ -1,4 +1,6 @@
 import React from "react";
+import axios from "axios";
+
 
 class NewCustForm extends React.Component {
     constructor(props){
@@ -20,6 +22,15 @@ class NewCustForm extends React.Component {
 
   handleSubmit(event) {
     const {userID, password, commission, address} = this.state;
+    const url = 'http://localhost/test.php';
+    const form = new FormData();
+    form.append('id', userID);
+    form.append('pass', password);
+    form.append('comm', commission);
+    form.append('addr', address);
+    axios.post(url, form).then(function(response){
+        console.log(response)
+    })
     event.preventDefault();
     alert('Associate Info was submitted. UserID: ' + userID + ' password: ' + password + ' commission: ' + commission + ' address: ' + address);
   }
