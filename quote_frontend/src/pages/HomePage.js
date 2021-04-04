@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import QuoteTable from '../components/QuoteTable';
 import SalesAssocTable from '../components/SalesAssocTable';
 import Grid from '@material-ui/core/Grid'
-import NewAssocForm from '../components/NewCustForm';
+import NewAssocForm from '../components/NewAssocForm';
  
 function HomePage() {
     return (
