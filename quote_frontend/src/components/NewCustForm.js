@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 
 
-class NewCustForm extends React.Component {
+class NewAssocForm extends React.Component {
     constructor(props){
         super(props);
         this.state = {userID: '',
@@ -63,4 +63,4 @@ class NewCustForm extends React.Component {
   }
 }
 
-export default NewCustForm;
+export default NewAssocForm;

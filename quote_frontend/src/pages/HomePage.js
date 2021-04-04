@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import QuoteTable from '../components/QuoteTable';
 import SalesAssocTable from '../components/SalesAssocTable';
 import Grid from '@material-ui/core/Grid'
-import NewCustForm from '../components/NewCustForm';
+import NewAssocForm from '../components/NewCustForm';
  
 function HomePage() {
     return (
@@ -17,7 +17,7 @@ function HomePage() {
                         <QuoteTable />
                     </Grid>
                     <Grid item>
-                        <NewCustForm />
+                        <NewAssocForm />
                     </Grid>
                 </Grid>
         </div>
