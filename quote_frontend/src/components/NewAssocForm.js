@@ -22,7 +22,7 @@ class NewAssocForm extends React.Component {
 
   handleSubmit(event) {
     const {userID, password, commission, address} = this.state;
-    const url = 'http://localhost/test.php';
+    const url = 'http://localhost/addassoc.php';
     const form = new FormData();
     form.append('id', userID);
     form.append('pass', password);
