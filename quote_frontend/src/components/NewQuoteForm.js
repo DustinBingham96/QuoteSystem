@@ -21,6 +21,7 @@ class NewQuoteForm extends React.Component {
     }
 
     handleSubmit(event){
+        const url = 'http://localhost/addnewquote.php'
         const {cID} = this.state;
         //const {aID} = find way to get associate ID from sign in
         var {qText} = this.state;
@@ -30,8 +31,21 @@ class NewQuoteForm extends React.Component {
         //console.log("Associate ID: " + aID);
         console.log(qText);
         console.log("Secret Text: " + sText);
+        console.log("Customer Email: "+ mail);
+
+        const form = new FormData();
+        form.append('cid', cID);
+        form.append('qtext', qText);
+        form.append('stext', sText);
+        form.append('email', mail);
+
+        axios.post(url,form).then(function (response){
+            console.log(response);
+        })
 
         event.preventDefault();
+
+        alert("Data was entered into new quote database successfully");
     }
 
     render() {
