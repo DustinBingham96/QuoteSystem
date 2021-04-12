@@ -5,6 +5,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import HomePage from "./pages/HomePage";
 import SalesAEditPage from "./pages/SalesAEditPage";
 import QuoteEditPage from "./pages/QuoteEditPage";
+import SalesLanding from "./pages/SalesLanding";
 
 
 
@@ -29,6 +30,8 @@ function App() {
         <Route exact path="/" render={(props) => <HomePage {...props} component={HomePage}/>} />
         <Route exact path="/sales" render={(props) => <SalesAEditPage {...props} component={SalesAEditPage}/>} />
         <Route exact path="/quotes" render={(props) => <QuoteEditPage {...props} component={QuoteEditPage}/>} />
+        <Route exact path="/salesLand" render={(props) => <SalesLanding {...props} component={SalesLanding}/>} />
+        
       </BrowserRouter>
 
    

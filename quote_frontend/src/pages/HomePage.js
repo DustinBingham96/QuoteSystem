@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid'
 import NewAssocForm from '../components/NewAssocForm';
 import DeleteAssocForm from '../components/DeleteAssocForm';
 import NewQuoteForm from '../components/NewQuoteForm';
+import LoginForm from '../components/LoginForm';
  
 function HomePage() {
     return (
@@ -13,13 +14,7 @@ function HomePage() {
             <Header />
                 <Grid container row>
                     <Grid item>
-                        <SalesAssocTable />
-                    </Grid>
-                    <Grid item>
-                        <QuoteTable />
-                    </Grid>
-                    <Grid item>
-                        <NewQuoteForm />
+                        <LoginForm />
                     </Grid>
                 </Grid>
         </div>
