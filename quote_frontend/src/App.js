@@ -6,6 +6,8 @@ import HomePage from "./pages/HomePage";
 import SalesAEditPage from "./pages/SalesAEditPage";
 import QuoteEditPage from "./pages/QuoteEditPage";
 import SalesLanding from "./pages/SalesLanding";
+import AdminPage from "./pages/AdminPage";
+import AdminAssociate from "./pages/AdminAssociate";
 
 
 
@@ -31,6 +33,8 @@ function App() {
         <Route exact path="/sales" render={(props) => <SalesAEditPage {...props} component={SalesAEditPage}/>} />
         <Route exact path="/quotes" render={(props) => <QuoteEditPage {...props} component={QuoteEditPage}/>} />
         <Route exact path="/salesLand" render={(props) => <SalesLanding {...props} component={SalesLanding}/>} />
+        <Route exact path="/AdminPage" render={(props) => <AdminPage {...props} component={AdminPage}/>} />
+        <Route exact path="/AdminAssociate" render={(props) => <AdminAssociate {...props} component={AdminAssociate}/>} />
         
       </BrowserRouter>
 
