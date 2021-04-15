@@ -8,6 +8,7 @@ import QuoteEditPage from "./pages/QuoteEditPage";
 import SalesLanding from "./pages/SalesLanding";
 import AdminPage from "./pages/AdminPage";
 import AdminAssociate from "./pages/AdminAssociate";
+import AdminQuote from "./pages/AdminQuote";
 
 
 
@@ -35,6 +36,7 @@ function App() {
         <Route exact path="/salesLand" render={(props) => <SalesLanding {...props} component={SalesLanding}/>} />
         <Route exact path="/AdminPage" render={(props) => <AdminPage {...props} component={AdminPage}/>} />
         <Route exact path="/AdminAssociate" render={(props) => <AdminAssociate {...props} component={AdminAssociate}/>} />
+        <Route exact path="/AdminQuote" render={(props) => <AdminQuote {...props} component={AdminQuote}/>} />
         
       </BrowserRouter>
 

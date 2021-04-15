@@ -25,13 +25,12 @@ class EditAssocForm extends React.Component{
         form.append('id', id);
         axios.post(url,form).then(function(response){
             console.log(response.data);
-            var x = response.data.toString();
-            x.split(" ");
+            var x = (response.data).split(" ");
             sessionStorage.setItem("user", x[0]);
-            console.log(x[0]);
             sessionStorage.setItem("pass", x[1]);
             sessionStorage.setItem("comm", x[2]);
             sessionStorage.setItem("addr", x[3]);
+            window.location.reload()
 
         })
         event.preventDefault();

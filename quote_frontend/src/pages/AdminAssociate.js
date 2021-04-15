@@ -11,10 +11,9 @@ function AdminAssociate() {
     return (
         <div>
             <Header />
+            <h1>Associate Add/Edit/Delete</h1>
+            <SalesAssocTable />
                 <Grid container row>
-                    <Grid item>
-                        <SalesAssocTable />
-                    </Grid>
                     <Grid item>
                         <NewAssocForm />
                     </Grid>

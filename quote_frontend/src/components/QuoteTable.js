@@ -1,27 +1,36 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import MaterialTable from 'material-table';
 
 
 
 export default function QuoteTable() {
 
-    const [data, setData] = useState([
-        {id: 4535435, custid: 4352345, notes: '12345', finalized: false, total: 3457823}
-    ]);
+    const [data, setData] = useState([])
+    const columns = [
+        {title: "QuoteID", field: "qID"},
+        {title: "CustomerID", field: "cID"},
+        {title: "AssociateID", field: "aID"},
+        {title: "Quote Text", field: "quote"},
+        {title: "Secret Text", field: "secret"},
+        {title: "Customer Email", field: "email"}
+    ]
+
+    useEffect(()=>{
+        fetch("http://localhost/quoteselectall.php")
+        .then(response=>response.json())
+        .then(response=>setData(response))
+
+    })
+
+    
 
     return (
         <div>
             <MaterialTable
-                columns = {[
-                    {title: 'ID', field: 'id', type: 'numeric'},
-                    {title: 'Customer ID', field: 'custid', type: 'numeric'},
-                    {title: 'Notes', field: 'notes'},
-                    {title: 'Finalized?', field: 'finalized', type: 'boolean'},
-                    {title: 'Total', field: 'total', type: 'numeric'}
-                ]}
-                data = {data}
                 title="Quote Database"
+                data = {data}
+                columns = {columns}
             />
         </div>
     );
-            }
+}
