@@ -41,7 +41,7 @@ export default function QuoteTableSales() {
     return (
         <div>
             <MaterialTable
-                title="Quote Database"
+                title="Sales User Quote Database"
                 data = {data}
                 columns = {columns}
             />

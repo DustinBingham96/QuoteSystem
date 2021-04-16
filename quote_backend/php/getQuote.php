@@ -9,7 +9,7 @@
     $dsn = "mysql:dbname=$dbname;host=$host";
     $pdo = new PDO($dsn, $user);
 
-    $res = $pdo->prepare("SELECT cID, quote, secret, finalized FROM newquote WHERE qID ='$qid'");
+    $res = $pdo->prepare("SELECT cID, quote, secret, finalized FROM quote WHERE qID ='$qid'");
     $res->execute();
 
     $row = $res->fetch(PDO::FETCH_ASSOC);

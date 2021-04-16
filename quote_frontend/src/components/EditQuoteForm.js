@@ -59,11 +59,11 @@ class EditQuoteForm extends React.Component {
             <div>
             <form onSubmit={this.handleSubmit}>
                 <div>
-                    <label htmlFor='ID'>Associate ID to edit</label>
-                    <input name='qID' placeholder='Associates ID #' value={this.state.qID} onChange={this.handleChange} />
+                    <label htmlFor='ID'>Quote Id to edit</label>
+                    <input name='qID' placeholder='Quote ID #' value={this.state.qID} onChange={this.handleChange} />
                 </div>
                 <div>
-                    <button>Get Associate Info</button>
+                    <button>Get Quote Info</button>
                 </div>
             </form>
             <form onSubmit={this.handleEdit}>
@@ -84,7 +84,7 @@ class EditQuoteForm extends React.Component {
                 <textarea name='secret' placeholder={sessionStorage.getItem("secret")} value = {this.state.secret} onChange={this.handleChange}/>
             </div>
             <div>
-                <label htmlFor='finalized'>address</label>
+                <label htmlFor='finalized'>finalized</label>
                 <input name='finalized' placeholder={sessionStorage.getItem("finalized")} value = {this.state.finalized} onChange={this.handleChange}/>
             </div>
             <div>

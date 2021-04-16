@@ -13,7 +13,7 @@
   $dsn = "mysql:dbname=$dbname;host=$host";
   $pdo = new PDO($dsn, $user);
 
-  $res = $pdo->prepare("UPDATE newquote SET cID = '$cid', quote = '$quote', secret = '$secret', finalized = '$finalized' WHERE qID = '$qid'");
+  $res = $pdo->prepare("UPDATE quote SET cID = '$cid', quote = '$quote', secret = '$secret', finalized = '$finalized' WHERE qID = '$qid'");
   $res->execute();
 
   $res = NULL;

@@ -24,7 +24,7 @@
 
 
     $pdo = new PDO($dsn, $user);
-    $res = $pdo->prepare("INSERT INTO newquote (cID, aID, quote, secret, email) VALUES ('$cid', '$aid', '$qtext', '$stext', '$email')");
+    $res = $pdo->prepare("INSERT INTO quote (cID, aID, quote, secret, email) VALUES ('$cid', '$aid', '$qtext', '$stext', '$email')");
     $res->execute();
 
     

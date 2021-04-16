@@ -3,7 +3,7 @@ import MaterialTable from 'material-table';
 
 
 
-export default function QuoteTable() {
+export default function QuoteTableHq() {
 
     const [data, setData] = useState([])
     const columns = [
@@ -17,9 +17,9 @@ export default function QuoteTable() {
     ]
 
     useEffect(()=>{
-        fetch("http://localhost/quoteselectall.php")
+        fetch("http://localhost/quoteselecthq.php")
         .then(response=>response.json())
-        .then(response=>console.log(response))
+        .then(response=>setData(response))
 
     })
 
@@ -28,7 +28,7 @@ export default function QuoteTable() {
     return (
         <div>
             <MaterialTable
-                title="Quote Database"
+                title="Finalized Quote Database"
                 data = {data}
                 columns = {columns}
             />

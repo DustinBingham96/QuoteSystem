@@ -8,7 +8,7 @@ $dbname = "mysql";
 $dsn = "mysql:dbname=$dbname;host=$host";
 $pdo = new PDO($dsn, $user);
 
-$res = $pdo->prepare("SELECT * FROM newquote");
+$res = $pdo->prepare("SELECT * FROM quote");
 $res->execute();
 
 $data = $res->fetchAll(PDO::FETCH_ASSOC);
