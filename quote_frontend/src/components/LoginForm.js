@@ -27,9 +27,10 @@ class LoginForm extends React.Component{
         axios.post(url, form).then(function(response){
             console.log(response.data);
             let x = response.data;
-            if(x == 1){
+            if(x > 0){
                 window.open("http://localhost:3000/salesLand", "_self");
                 sessionStorage.setItem("username", userID);
+                sessionStorage.setItem("ID", x);
             }
             else{
                 alert("Login Failed! Please try again or contact administrator to reset password");

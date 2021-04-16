@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 
+var ID = sessionStorage.getItem("ID");
+
 class NewQuoteForm extends React.Component {
     constructor(props){
         super(props);
@@ -8,11 +10,13 @@ class NewQuoteForm extends React.Component {
                       assocID: 0,
                       quoteText: '',
                       secretText: '',
-                      email: '' };
+                      email: '',
+                      finalized: false};
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+
 
     handleChange(event){
         this.setState({
@@ -23,24 +27,23 @@ class NewQuoteForm extends React.Component {
     handleSubmit(event){
         const url = 'http://localhost/addnewquote.php'
         const {cID} = this.state;
-        //const {aID} = find way to get associate ID from sign in
         var {qText} = this.state;
         var {sText} = this.state;
         var {mail} = this.state;
-        console.log("Customer ID: "+ cID);
-        //console.log("Associate ID: " + aID);
-        console.log(qText);
-        console.log("Secret Text: " + sText);
-        console.log("Customer Email: "+ mail);
+        var {finalized} = this.state;
 
         const form = new FormData();
         form.append('cid', cID);
+        form.append('aid', ID);
+        form.append('ID', ID);
         form.append('qtext', qText);
         form.append('stext', sText);
         form.append('email', mail);
+        form.append('finalized', finalized);
 
         axios.post(url,form).then(function (response){
             console.log(response);
+
         })
 
         event.preventDefault();
