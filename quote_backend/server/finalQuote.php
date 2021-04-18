@@ -28,6 +28,11 @@ $res->execute();
 
 $email = $res->fetch(PDO::FETCH_ASSOC);
 
+$res = $pdo->prepare("SELECT commission FROM sales WHERE ID = '$aID';");
+$res->execute();
+
+$commission = $res->fetch(PDO::FETCH_ASSOC);
+
 $url = 'http://blitz.cs.niu.edu/PurchaseOrder/';
 $data = array(
 	'order' => $ID, 
@@ -46,8 +51,22 @@ $options = array(
 $context  = stream_context_create($options);
 $result = file_get_contents($url, false, $context);
 
+$obj = json_decode($result);
+
+$resultMsg = "Order Number - " . $obj->order . " Name - " . $obj->name . " Customer ID - " . $obj->custid;
+
+$commission += $finalPrice * $obj->commission;
+
+$processDate = $obj->processDay;
+$processingDate = "Processing Date - " . $processDate;
+$finalPriceMsg = "Final price - " . $finalPrice;
+
+$res = $pdo->prepare("UPDATE sales SET commission = '$commission' WHERE ID = '$aID';");
+$res->execute();
+
+
 // sends the information to the customer based on the email address provided in the customer information
-mail($email, "Final Quote - Purchase Order", $processDate, $finalPriceMsg, $result);
+mail($email, "Final Quote - Purchase Order", $processingDate, $finalPriceMsg, $result);
 
 echo $result;
 ?>
