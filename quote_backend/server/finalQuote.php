@@ -66,7 +66,7 @@ $res->execute();
 
 
 // sends the information to the customer based on the email address provided in the customer information
-mail($email, "Final Quote - Purchase Order", $processingDate, $finalPriceMsg, $result);
+mail($email, "Final Quote - Purchase Order", $processingDate, $finalPriceMsg, $resultMsg);
 
 echo $result;
 ?>
