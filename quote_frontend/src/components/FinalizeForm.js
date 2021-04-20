@@ -18,7 +18,7 @@ class FinalizeForm extends React.Component {
 
     handleSubmit(event) {
         const {qID, finalPrice} = this.state;
-        const url = 'http://localhost/finalizequote.php';
+        const url = 'http://localhost/finalize.php';
         const form = new FormData();
         form.append('qid', qID);
         form.append('finalPrice', finalPrice)

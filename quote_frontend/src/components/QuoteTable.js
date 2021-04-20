@@ -7,19 +7,19 @@ export default function QuoteTable() {
 
     const [data, setData] = useState([])
     const columns = [
-        {title: "QuoteID", field: "qID"},
-        {title: "CustomerID", field: "cID"},
-        {title: "AssociateID", field: "aID"},
+        {title: "QuoteID", field: "qID", type:"numeric",},
+        {title: "CustomerID", field: "cID", type:"numeric"},
+        {title: "AssociateID", field: "aID", type: "numeric"},
         {title: "Quote Text", field: "quote"},
         {title: "Secret Text", field: "secret"},
         {title: "Customer Email", field: "email"},
-        {title: "Finalized", field: "finalized"}
+        {title: "Finalized", field: "finalized", type: "numeric"}
     ]
 
     useEffect(()=>{
         fetch("http://localhost/quoteselectall.php")
         .then(response=>response.json())
-        .then(response=>console.log(response))
+        .then(response=>setData(response))
 
     })
 
@@ -31,6 +31,8 @@ export default function QuoteTable() {
                 title="Quote Database"
                 data = {data}
                 columns = {columns}
+                icons={{ Filter: () => <div />}}
+                options={{  filtering: true}}
             />
         </div>
     );

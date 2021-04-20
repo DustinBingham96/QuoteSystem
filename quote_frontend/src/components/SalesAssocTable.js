@@ -6,7 +6,7 @@ export default function SalesAssocTable() {
 
     const [data, setData] = useState([])
     const columns = [
-        {title: "ID", field: "ID"},
+        {title: "ID", field: "ID", type: "numeric"},
         {title: "username", field:"userID"},
         {title: "Password", field: "password"},
         {title: "Commission", field: "commission"},
@@ -26,6 +26,8 @@ export default function SalesAssocTable() {
                 title="Sales Associate Database"
                 data = {data}
                 columns = {columns}
+                icons={{ Filter: () => <div />}}
+                options={{  filtering: true}}
             />
         </div>
     );

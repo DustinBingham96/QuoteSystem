@@ -31,6 +31,8 @@ export default function QuoteTableHq() {
                 title="Finalized Quote Database"
                 data = {data}
                 columns = {columns}
+                icons={{ Filter: () => <div />}}
+                options={{  filtering: true}}
             />
         </div>
     );

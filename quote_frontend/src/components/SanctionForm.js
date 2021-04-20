@@ -17,7 +17,7 @@ class SanctionForm extends React.Component{
 
     handleSubmit(event) {
         const {qID} = this.state;
-        const url = 'http://localhost/sanctionquote.php';
+        const url = 'http://localhost/sanction.php';
         const form = new FormData();
         form.append('qid', qID);
         axios.post(url,form).then(function(response){

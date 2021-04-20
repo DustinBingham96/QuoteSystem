@@ -44,6 +44,8 @@ export default function QuoteTableSales() {
                 title="Sales User Quote Database"
                 data = {data}
                 columns = {columns}
+                icons={{ Filter: () => <div />}}
+                options={{  filtering: true}}
             />
         </div>
     );
