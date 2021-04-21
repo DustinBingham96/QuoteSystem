@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import { Input, InputLabel, TextField, Button} from '@material-ui/core';
+
 
 class EditAssocForm extends React.Component{
     constructor(props){
@@ -56,32 +58,32 @@ class EditAssocForm extends React.Component{
             <div>
             <form onSubmit={this.handleSubmit}>
                 <div>
-                    <label htmlFor='ID'>Associate ID to edit</label>
-                    <input name='id' placeholder='Associates ID #' value={this.state.id} onChange={this.handleChange} />
+                    <InputLabel htmlFor='ID'>Associate ID to edit</InputLabel>
+                    <Input name='id' placeholder='Associates ID #' value={this.state.id} onChange={this.handleChange} />
                 </div>
                 <div>
-                    <button>Get Associate Info</button>
+                    <Button>Get Associate Info</Button>
                 </div>
             </form>
             <form onSubmit={this.handleEdit}>
             <div>
-                <label htmlFor='userID'>userID</label>
-                <input name='userID' placeholder={sessionStorage.getItem("user")} value = {this.state.userID} onChange={this.handleChange}/>
+                <InputLabel htmlFor='userID'>userID</InputLabel>
+                <Input name='userID' placeholder={sessionStorage.getItem("user")} value = {this.state.userID} onChange={this.handleChange}/>
             </div>
             <div>
-                <label htmlFor='password'>password</label>
-                <input name='password' placeholder={sessionStorage.getItem("pass")} value = {this.state.password} onChange={this.handleChange}/>
+                <InputLabel htmlFor='password'>password</InputLabel>
+                <Input name='password' placeholder={sessionStorage.getItem("pass")} value = {this.state.password} onChange={this.handleChange}/>
             </div>
             <div>
-                <label htmlFor='commission'>commission</label>
-                <input name='commission' placeholder={sessionStorage.getItem("comm")} value = {this.state.commission} onChange={this.handleChange}/>
+                <InputLabel htmlFor='commission'>commission</InputLabel>
+                <Input name='commission' placeholder={sessionStorage.getItem("comm")} value = {this.state.commission} onChange={this.handleChange}/>
             </div>
             <div>
-                <label htmlFor='address'>address</label>
-                <input name='address' placeholder={sessionStorage.getItem("addr")} value = {this.state.address} onChange={this.handleChange}/>
+                <InputLabel htmlFor='address'>address</InputLabel>
+                <Input name='address' placeholder={sessionStorage.getItem("addr")} value = {this.state.address} onChange={this.handleChange}/>
             </div>
             <div>
-                <button>Edit Info</button>
+                <Button>Edit Info</Button>
             </div>
     
           </form>

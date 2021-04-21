@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import { Input, InputLabel, TextField, Button} from '@material-ui/core';
+
 
 class DeleteAssocForm extends React.Component {
     constructor(props){
@@ -32,11 +34,11 @@ class DeleteAssocForm extends React.Component {
         return(
             <form onSubmit={this.handleSubmit}>
                 <div>
-                    <label htmlFor='ID'>Associate ID</label>
-                    <input name='id' placeholder='Associates ID #' value={this.state.id} onChange={this.handleChange} />
+                    <InputLabel htmlFor='ID'>Associate ID</InputLabel>
+                    <Input name='id' placeholder='Associates ID #' value={this.state.id} onChange={this.handleChange} />
                 </div>
                 <div>
-                    <button>Delete Associate Info</button>
+                    <Button>Delete Associate Info</Button>
                 </div>
             </form>
         );

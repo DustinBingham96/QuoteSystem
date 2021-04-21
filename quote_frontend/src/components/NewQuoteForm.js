@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Input, InputLabel, TextField, Button} from '@material-ui/core';
 
 var ID = sessionStorage.getItem("ID");
 
@@ -55,25 +56,26 @@ class NewQuoteForm extends React.Component {
         return(
             <form onSubmit={this.handleSubmit}>
                 <div>
-                    <label htmlFor='cID'>Customer ID</label>
-                    <input name='cID' placeholder="Customer's ID #" value={this.state.cID} onChange={this.handleChange}/>
+
+                    <InputLabel htmlFor='cID'>Customer ID</InputLabel>
+                    <Input name='cID' placeholder="Customer's ID #" value={this.state.cID} onChange={this.handleChange}/>
                 </div>
 
                 <div>
-                    <label htmlFor='mail'>Customer email</label>
-                    <input name='mail' placeholder="Associates's email address" value={this.state.mail} onChange={this.handleChange}/>
+                    <InputLabel htmlFor='mail'>Customer Email</InputLabel>
+                    <Input name='mail' placeholder="Associate Email Address" value={this.state.mail} onChange={this.handleChange}/>
                 </div>
 
                 <div>
-                    <textarea name='qText' placeholder="Enter quote here. Please preceed the price of the line item with a $" value={this.state.qText} onChange={this.handleChange}/>
+                    <TextField name='qText' placeholder="Enter Quote here. Please Preceed The Price of the Line Item with a $" value={this.state.qText} onChange={this.handleChange}/>
                 </div>
 
                 <div>
-                    <textarea name='sText' placeholder="Enter secret text here." value={this.state.sText} onChange={this.handleChange}/>
+                    <TextField name='sText' placeholder="Enter secret text here." value={this.state.sText} onChange={this.handleChange}/>
                 </div>
 
                 <div>
-                    <button>Enter</button>
+                    <Button>Enter</Button>
                 </div>
 
             </form>

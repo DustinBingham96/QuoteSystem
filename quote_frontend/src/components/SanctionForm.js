@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import { Input, InputLabel, TextField, Button} from '@material-ui/core';
+
 
 class SanctionForm extends React.Component{
     constructor(props){
@@ -31,11 +33,11 @@ class SanctionForm extends React.Component{
         return (
             <form onSubmit={this.handleSubmit}>
                 <div>
-                    <label htmlFor='qID'>Quote ID to sanction</label>
-                    <input name='qID' placeholder='quote ID #' value={this.state.qID} onChange={this.handleChange} />
+                    <InputLabel htmlFor='qID'>Quote ID to sanction</InputLabel>
+                    <Input name='qID' placeholder='quote ID #' value={this.state.qID} onChange={this.handleChange} />
                 </div>
                 <div>
-                    <button>Sanction Quote</button>
+                    <Button>Sanction Quote</Button>
                 </div>
             </form>
         )

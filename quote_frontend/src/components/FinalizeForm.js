@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import { Input, InputLabel, TextField, Button} from '@material-ui/core';
+
 
 class FinalizeForm extends React.Component {
     constructor(props){
@@ -33,15 +35,15 @@ class FinalizeForm extends React.Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <div>
-                    <label htmlFor='qID'>Quote ID to finalize</label>
-                    <input name='qID' placeholder='quote ID #' value={this.state.qID} onChange={this.handleChange} />
+                    <InputLabel htmlFor='qID'>Quote ID to finalize</InputLabel>
+                    <Input name='qID' placeholder='quote ID #' value={this.state.qID} onChange={this.handleChange} />
                 </div>
                 <div>
-                    <label htmlFor='finalPrice'>Final Price of Quote</label>
-                    <input name='finalPrice' placeholder='Price after any further discounts' value={this.state.finalPrice} onChange={this.handleChange} />
+                    <InputLabel htmlFor='finalPrice'>Final Price of Quote</InputLabel>
+                    <Input name='finalPrice' placeholder='Price after any further discounts' value={this.state.finalPrice} onChange={this.handleChange} />
                 </div>
                 <div>
-                    <button>Finalize Quote</button>
+                    <Button>Finalize Quote</Button>
                 </div>
             </form>
         )

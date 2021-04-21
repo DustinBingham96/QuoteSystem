@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from '../components/Header';
-
+import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
 
 
 
@@ -17,13 +18,17 @@ function AdminPage() {
     return (
         <div>
             <Header />
-                <Grid container row>
-                    <Grid item>
-                        <h1>Welcome Admin!</h1>
-                        <button name="Associate" onClick={handleSubmitAssoc}>Go To Associate Page</button>
-                        <button name="Quote" onClick={handleSubmitQuote}>Go To Quote Page</button>
-                    </Grid>
+            <Typography>
+                <h1>Welcome Admin!</h1>
+            </Typography>
+            <Grid container row justify="space-evenly" alignItems="stretch">
+                <Grid item>
+                    <Button name="Associate" onClick={handleSubmitAssoc}>Go To Associate Page</Button>
                 </Grid>
+                <Grid item>
+                    <Button name="Quote" onClick={handleSubmitQuote}>Go To Quote Page</Button>
+                </Grid>
+            </Grid>
         </div>
     );
 }

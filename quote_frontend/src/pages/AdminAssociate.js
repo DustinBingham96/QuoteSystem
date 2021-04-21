@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid'
 import NewAssocForm from '../components/NewAssocForm';
 import DeleteAssocForm from '../components/DeleteAssocForm';
 import EditAssocForm from '../components/EditAssocForm';
+import Card from '@material-ui/core/Card'
 
  
 function AdminAssociate() {
@@ -13,7 +14,7 @@ function AdminAssociate() {
             <Header />
             <h1>Associate Add/Edit/Delete</h1>
             <SalesAssocTable />
-                <Grid container row>
+                <Grid container row xs={16}>
                     <Grid item>
                         <NewAssocForm />
                     </Grid>

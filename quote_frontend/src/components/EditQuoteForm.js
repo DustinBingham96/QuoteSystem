@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import { Input, InputLabel, TextField, Button} from '@material-ui/core';
+
 
 var ID = sessionStorage.getItem("ID");
 
@@ -59,36 +61,36 @@ class EditQuoteForm extends React.Component {
             <div>
             <form onSubmit={this.handleSubmit}>
                 <div>
-                    <label htmlFor='ID'>Quote Id to edit</label>
-                    <input name='qID' placeholder='Quote ID #' value={this.state.qID} onChange={this.handleChange} />
+                    <InputLabel htmlFor='ID'>Quote Id to edit</InputLabel>
+                    <Input name='qID' placeholder='Quote ID #' value={this.state.qID} onChange={this.handleChange} />
                 </div>
                 <div>
-                    <button>Get Quote Info</button>
+                    <Button>Get Quote Info</Button>
                 </div>
             </form>
             <form onSubmit={this.handleEdit}>
             <div>
-                <label htmlFor='qid'>QuoteID Being Edited</label>
-                <input name='qID' value = {this.state.qID} onChange={this.handleChange}/>
+                <InputLabel htmlFor='qid'>QuoteID Being Edited</InputLabel>
+                <Input name='qID' value = {this.state.qID} onChange={this.handleChange}/>
             </div>
             <div>
-                <label htmlFor='cid'>CustID</label>
-                <input name='cid' placeholder={sessionStorage.getItem("cid")} value = {this.state.cid} onChange={this.handleChange}/>
+                <InputLabel htmlFor='cid'>CustID</InputLabel>
+                <Input name='cid' placeholder={sessionStorage.getItem("cid")} value = {this.state.cid} onChange={this.handleChange}/>
             </div>
             <div>
-                <label htmlFor='quote'>Quote</label>
-                <textarea name='quote' placeholder={sessionStorage.getItem("quote")} value = {this.state.quote} onChange={this.handleChange}/>
+                <InputLabel htmlFor='quote'>Quote</InputLabel>
+                <TextField name='quote' placeholder={sessionStorage.getItem("quote")} value = {this.state.quote} onChange={this.handleChange}/>
             </div>
             <div>
-                <label htmlFor='secret'>secret</label>
-                <textarea name='secret' placeholder={sessionStorage.getItem("secret")} value = {this.state.secret} onChange={this.handleChange}/>
+                <InputLabel htmlFor='secret'>Secret</InputLabel>
+                <TextField name='secret' placeholder={sessionStorage.getItem("secret")} value = {this.state.secret} onChange={this.handleChange}/>
             </div>
             <div>
-                <label htmlFor='finalized'>finalized</label>
-                <input name='finalized' placeholder={sessionStorage.getItem("finalized")} value = {this.state.finalized} onChange={this.handleChange}/>
+                <InputLabel htmlFor='finalized'>Finalized</InputLabel>
+                <Input name='finalized' placeholder={sessionStorage.getItem("finalized")} value = {this.state.finalized} onChange={this.handleChange}/>
             </div>
             <div>
-                <button>Edit Info</button>
+                <Button>Edit Info</Button>
             </div>
     
           </form>

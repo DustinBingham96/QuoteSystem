@@ -1,6 +1,9 @@
 import React from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import {Button, TextField, Input, InputLabel, Card, Typography } from '@material-ui/core';
+import '../css/Form.css'
+
 
 class LoginForm extends React.Component{
     constructor(props){
@@ -44,19 +47,21 @@ class LoginForm extends React.Component{
         return (
           <form onSubmit={this.handleSubmit}>
             <div>
-                <h1>Welcome! Please Login Below</h1>
-                <label htmlFor='userID'>userID</label>
-                <input name='userID' placeholder='userID' value = {this.state.userID} onChange={this.handleChange}/>
+                <Typography>
+                <h1>Welcome! Login Below</h1>
+                </Typography>
+                <InputLabel className="formlabel" color="primary" htmlFor='userID'>UserID</InputLabel>
+                <Input name='userID' placeholder='UserID' value = {this.state.userID} onChange={this.handleChange}/>
             </div>
+            <br />
             <div>
-                <label htmlFor='password'>password</label>
-                <input type='password' name='password' placeholder='password' value = {this.state.password} onChange={this.handleChange}/>
+                <InputLabel htmlFor='password'>Password</InputLabel>
+                <Input type='password' name='password' placeholder='Password' value = {this.state.password} onChange={this.handleChange}/>
             </div>
             <div>
                 <br></br>
-                <button>Login</button>
+                <Button>Login</Button>
             </div>
-    
           </form>
         );
       }
