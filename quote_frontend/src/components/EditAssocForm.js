@@ -67,19 +67,19 @@ class EditAssocForm extends React.Component{
             </form>
             <form onSubmit={this.handleEdit}>
             <div>
-                <InputLabel htmlFor='userID'>userID</InputLabel>
+                <InputLabel htmlFor='userID'>UserID</InputLabel>
                 <Input name='userID' placeholder={sessionStorage.getItem("user")} value = {this.state.userID} onChange={this.handleChange}/>
             </div>
             <div>
-                <InputLabel htmlFor='password'>password</InputLabel>
+                <InputLabel htmlFor='password'>Password</InputLabel>
                 <Input name='password' placeholder={sessionStorage.getItem("pass")} value = {this.state.password} onChange={this.handleChange}/>
             </div>
             <div>
-                <InputLabel htmlFor='commission'>commission</InputLabel>
+                <InputLabel htmlFor='commission'>Commission</InputLabel>
                 <Input name='commission' placeholder={sessionStorage.getItem("comm")} value = {this.state.commission} onChange={this.handleChange}/>
             </div>
             <div>
-                <InputLabel htmlFor='address'>address</InputLabel>
+                <InputLabel htmlFor='address'>Address</InputLabel>
                 <Input name='address' placeholder={sessionStorage.getItem("addr")} value = {this.state.address} onChange={this.handleChange}/>
             </div>
             <div>

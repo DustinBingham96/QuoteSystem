@@ -3,7 +3,8 @@ import Header from '../components/Header';
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
-
+import { makeStyles } from '@material-ui/core';
+import '../css/Header.css';
 
 
 function handleSubmitAssoc()
@@ -19,7 +20,7 @@ function AdminPage() {
         <div>
             <Header />
             <Typography>
-                <h1>Welcome Admin!</h1>
+                <h2 className="header">Welcome Admin!</h2>
             </Typography>
             <Grid container row justify="space-evenly" alignItems="stretch">
                 <Grid item>

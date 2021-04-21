@@ -1,5 +1,11 @@
-header {
+.header {
     background-color: #126e82;
+    color: white;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
 }
 
 .buttons {

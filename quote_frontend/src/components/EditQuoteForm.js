@@ -61,12 +61,13 @@ class EditQuoteForm extends React.Component {
             <div>
             <form onSubmit={this.handleSubmit}>
                 <div>
-                    <InputLabel htmlFor='ID'>Quote Id to edit</InputLabel>
+                    <InputLabel htmlFor='ID'>Quote ID to Edit</InputLabel>
                     <Input name='qID' placeholder='Quote ID #' value={this.state.qID} onChange={this.handleChange} />
                 </div>
                 <div>
                     <Button>Get Quote Info</Button>
                 </div>
+                <br />
             </form>
             <form onSubmit={this.handleEdit}>
             <div>

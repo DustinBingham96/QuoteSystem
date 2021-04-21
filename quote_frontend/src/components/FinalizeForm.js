@@ -35,7 +35,7 @@ class FinalizeForm extends React.Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <div>
-                    <InputLabel htmlFor='qID'>Quote ID to finalize</InputLabel>
+                    <InputLabel htmlFor='qID'>Quote ID to Finalize</InputLabel>
                     <Input name='qID' placeholder='quote ID #' value={this.state.qID} onChange={this.handleChange} />
                 </div>
                 <div>

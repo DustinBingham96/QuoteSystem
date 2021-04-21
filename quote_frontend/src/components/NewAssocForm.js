@@ -41,20 +41,20 @@ class NewAssocForm extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <div>
-            <InputLabel htmlFor='userID'>userID</InputLabel>
-            <Input name='userID' placeholder='userID' value = {this.state.userID} onChange={this.handleChange}/>
+            <InputLabel htmlFor='userID'>UserID</InputLabel>
+            <Input name='userID' placeholder='UserID' value = {this.state.userID} onChange={this.handleChange}/>
         </div>
         <div>
-            <InputLabel htmlFor='password'>password</InputLabel>
-            <Input name='password' placeholder='password' value = {this.state.password} onChange={this.handleChange}/>
+            <InputLabel htmlFor='password'>Password</InputLabel>
+            <Input name='password' placeholder='Password' value = {this.state.password} onChange={this.handleChange}/>
         </div>
         <div>
-            <InputLabel htmlFor='commission'>commission</InputLabel>
-            <Input name='commission' placeholder='commission' value = {this.state.commission} onChange={this.handleChange}/>
+            <InputLabel htmlFor='commission'>Commission</InputLabel>
+            <Input name='commission' placeholder='Commission' value = {this.state.commission} onChange={this.handleChange}/>
         </div>
         <div>
-            <InputLabel htmlFor='address'>address</InputLabel>
-            <Input name='address' placeholder='address' value = {this.state.address} onChange={this.handleChange}/>
+            <InputLabel htmlFor='address'>Address</InputLabel>
+            <Input name='address' placeholder='Address' value = {this.state.address} onChange={this.handleChange}/>
         </div>
         <div>
             <Button>Submit Info</Button>

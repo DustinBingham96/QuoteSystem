@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import MaterialTable from 'material-table';
 import { forwardRef } from 'react';
+import '../css/Table.css'
 
 import AddBox from '@material-ui/icons/AddBox';
 import ArrowDownward from '@material-ui/icons/ArrowDownward';
@@ -63,7 +64,7 @@ export default function QuoteTableHq() {
     
 
     return (
-        <div>
+        <div className="tableDiv">
             <MaterialTable
                 icons={tableIcons}
                 title="Finalized Quote Database"

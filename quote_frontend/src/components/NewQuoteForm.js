@@ -67,11 +67,11 @@ class NewQuoteForm extends React.Component {
                 </div>
 
                 <div>
-                    <TextField name='qText' placeholder="Enter Quote here. Please Preceed The Price of the Line Item with a $" value={this.state.qText} onChange={this.handleChange}/>
+                    <TextField name='qText' placeholder="Enter Quote Here. Please Preceed The Price of the Line Item with a $" value={this.state.qText} onChange={this.handleChange}/>
                 </div>
 
                 <div>
-                    <TextField name='sText' placeholder="Enter secret text here." value={this.state.sText} onChange={this.handleChange}/>
+                    <TextField name='sText' placeholder="Enter Secret Text" value={this.state.sText} onChange={this.handleChange}/>
                 </div>
 
                 <div>

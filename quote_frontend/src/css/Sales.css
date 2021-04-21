@@ -1,6 +1,11 @@
 .sales {
     padding: 10%;
     margin: 10%;
+    max-width: 100%;
+}
+
+.salesGrid {
+    max-width: 80%;
 }
 
 .title {
@@ -10,4 +15,5 @@
 .heading {
     display: inline;
     margin: 0;
+    max-width: 100%;
 }
