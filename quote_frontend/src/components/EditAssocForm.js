@@ -25,6 +25,7 @@ class EditAssocForm extends React.Component{
         const url = 'http://localhost/getAssociate.php';
         const form = new FormData();
         form.append('id', id);
+        sessionStorage.setItem("idNum", id);
         axios.post(url,form).then(function(response){
             console.log(response.data);
             var x = (response.data).split(" ");
@@ -42,6 +43,7 @@ class EditAssocForm extends React.Component{
         const {userID, password, commission, address} = this.state;
     const url = 'http://localhost/editassociate.php';
     const form = new FormData();
+    form.append('ID', sessionStorage.getItem("idNum"));
     form.append('id', userID);
     form.append('pass', password);
     form.append('comm', commission);
@@ -62,7 +64,7 @@ class EditAssocForm extends React.Component{
                     <Input name='id' placeholder='Associates ID #' value={this.state.id} onChange={this.handleChange} />
                 </div>
                 <div>
-                    <Button>Get Associate Info</Button>
+                    <button>Get Associate Info</button>
                 </div>
             </form>
             <form onSubmit={this.handleEdit}>
@@ -83,7 +85,7 @@ class EditAssocForm extends React.Component{
                 <Input name='address' placeholder={sessionStorage.getItem("addr")} value = {this.state.address} onChange={this.handleChange}/>
             </div>
             <div>
-                <Button>Edit Info</Button>
+                <button>Edit Info</button>
             </div>
     
           </form>

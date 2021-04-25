@@ -37,6 +37,7 @@ class EditQuoteForm extends React.Component {
         })
         event.preventDefault();
         
+        
     }
 
     handleEdit(event) {   
@@ -52,7 +53,7 @@ class EditQuoteForm extends React.Component {
         console.log(response)
     })
     event.preventDefault();
-    alert('Associate Info was submitted. CustID: ' + cid + ' quote: ' + quote + ' : ' + secret + ' address: ' + finalized);
+    alert('Quote Info was submitted. CustID: ' + cid + ' quote: ' + quote + ' : ' + secret + ' address: ' + finalized);
     }
 
 
@@ -65,7 +66,7 @@ class EditQuoteForm extends React.Component {
                     <Input name='qID' placeholder='Quote ID #' value={this.state.qID} onChange={this.handleChange} />
                 </div>
                 <div>
-                    <Button>Get Quote Info</Button>
+                    <button>Get Quote Info</button>
                 </div>
                 <br />
             </form>
@@ -91,7 +92,7 @@ class EditQuoteForm extends React.Component {
                 <Input name='finalized' placeholder={sessionStorage.getItem("finalized")} value = {this.state.finalized} onChange={this.handleChange}/>
             </div>
             <div>
-                <Button>Edit Info</Button>
+                <button>Edit Info</button>
             </div>
     
           </form>

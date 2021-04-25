@@ -27,6 +27,7 @@ class SanctionForm extends React.Component{
         })
         event.preventDefault();
         //handle error and success alert messages below
+        alert("Quote: " + qID + " has been sanctioned");
     }
 
     render() {
@@ -37,7 +38,7 @@ class SanctionForm extends React.Component{
                     <Input name='qID' placeholder='quote ID #' value={this.state.qID} onChange={this.handleChange} />
                 </div>
                 <div>
-                    <Button>Sanction Quote</Button>
+                    <button>Sanction Quote</button>
                 </div>
             </form>
         )

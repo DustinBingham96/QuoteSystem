@@ -75,7 +75,7 @@ class NewQuoteForm extends React.Component {
                 </div>
 
                 <div>
-                    <Button>Enter</Button>
+                    <button>Enter</button>
                 </div>
 
             </form>

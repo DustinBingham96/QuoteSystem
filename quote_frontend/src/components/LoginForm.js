@@ -60,7 +60,7 @@ class LoginForm extends React.Component{
             </div>
             <div>
                 <br></br>
-                <Button>Login</Button>
+                <button>Login</button>
             </div>
           </form>
         );

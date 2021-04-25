@@ -54,10 +54,13 @@ $result = file_get_contents($url, false, $context);
 
 $obj = json_decode($result);
 
+$price = floatval($finalPrice);
 
-$commission += $finalPrice * (($obj->commission)/100);
+$commission += $price * (($obj->commission)/100);
 
 $commission = round($commission, 2);
+
+echo $commission;
 
 $res = $pdo->prepare("UPDATE sales SET commission = '$commission' WHERE ID = '$aID';");
 $res->execute();

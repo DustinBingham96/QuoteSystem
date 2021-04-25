@@ -27,7 +27,7 @@ class DeleteAssocForm extends React.Component {
             console.log(response);
         })
         event.preventDefault();
-        alert('Associate with ID number: ' + id + 'was deleted');
+        alert('Associate with ID number: ' + id + ' was deleted');
     }
 
     render() {
@@ -38,7 +38,7 @@ class DeleteAssocForm extends React.Component {
                     <Input name='id' placeholder='Associates ID #' value={this.state.id} onChange={this.handleChange} />
                 </div>
                 <div>
-                    <Button>Delete Associate Info</Button>
+                    <button>Delete Associate Info</button>
                 </div>
             </form>
         );

@@ -57,7 +57,7 @@ class NewAssocForm extends React.Component {
             <Input name='address' placeholder='Address' value = {this.state.address} onChange={this.handleChange}/>
         </div>
         <div>
-            <Button>Submit Info</Button>
+            <button>Submit Info</button>
         </div>
 
       </form>

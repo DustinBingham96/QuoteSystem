@@ -29,6 +29,7 @@ class FinalizeForm extends React.Component {
         })
         event.preventDefault();
         //handle error and success alert messages below
+        alert("Quote: " + qID + " has been finalized with the final price of: " + finalPrice);
     }
 
     render() {
@@ -43,7 +44,7 @@ class FinalizeForm extends React.Component {
                     <Input name='finalPrice' placeholder='Price after any further discounts' value={this.state.finalPrice} onChange={this.handleChange} />
                 </div>
                 <div>
-                    <Button>Finalize Quote</Button>
+                    <button>Finalize Quote</button>
                 </div>
             </form>
         )
